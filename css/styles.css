@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --base-color: rgb(255, 255, 255);
+    --text-color: black;
+    --secondary-text-color: gray;
+    --special-text-color: rgb(90, 170, 16);
+    --secondary-color: rgb(175, 214, 159);
+    --accent-color: rgb(161, 247, 62);
+    --navbar-height: 100px;
+}
+
+.darkmode{
+    --base-color: rgb(54, 57, 68);
+    --text-color: rgb(228, 228, 228);
+    --secondary-text-color: lightgray;
+    --secondary-color: rgb(175, 214, 159);
+    --special-text-color: rgb(90, 170, 16);
+    --accent-color: rgb(161, 247, 62);
+}
+
+body{
+    background: url("../images/tlo.png") no-repeat center center fixed;
+    background-size: cover;
+    padding-top: var(--navbar-height);
+}
+
+.navbar{
+    background-color: var(--base-color);
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+#clicked{
+    text-decoration: underline 7px solid var(--accent-color);
+}
+
+.bar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.bar-link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: fantasy;
+    font-size: 25px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.bar-link:hover{
+    transition: 0.3s;
+    font-size: 30px;
+    border-bottom: 7px solid var(--accent-color);
+    border-radius: 2px;
+}
+
+.name-logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.name h1{
+    color: var(--special-text-color);
+    font-family: fantasy;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+.logo img{
+    height: 70px;
+}
+
+.theme-switch{
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-switch i{
+    font-size: 20px;
+}
+.theme-switch:hover{
+    cursor: pointer;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+}
+.theme-switch i:last-child{
+    display: none;
+}
+.darkmode .theme-switch i:first-child{
+    display: none;
+}
+.darkmode .theme-switch i:last-child{
+    display: block;
+}
+
+@media (max-width: 868px){
+    :root{
+        --navbar-height: 140px;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        padding: 10px 15px;
+    }
+    .bar{
+        position: static;
+        left: auto;
+        transform: none;
+        margin-top: 8px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .name h1{
+        font-size: 36px;
+    }
+    .logo img{
+        height: 50px;
+    }
+    .theme-switch{
+        margin-top: 8px;
+    }
+    body{
+        padding-top: var(--navbar-height);
+    }
+}

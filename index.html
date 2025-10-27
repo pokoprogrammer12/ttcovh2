@@ -6,10 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>ttc.ovh | home</title>
-        <script src="./script.js"></script>
-        <link rel="stylesheet" href="./kopa.css">
+        <script src="./js/dark-light-modes.js" defer></script>
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
-<body>
-    
+<body class="">
+    <div class="navbar">
+        <div class="name-logo">
+            <div class="logo">
+                <img src="./images/ttc_logo_1.png" alt="">
+            </div>
+            <div class="name">
+                <h1>TTC.OVH</h1>
+            </div>
+        </div>
+
+        <div class="bar">
+            <a href="./index.html" class="bar-link" id="clicked">Home</a>
+            <a href="./index.html" class="bar-link">Info</a>
+            <a href="https://mapa.ttc.ovh/" target="_blank" class="bar-link">Mapa</a>
+            <a href="./index.html" class="bar-link">Regulamin</a>
+        </div>
+
+        <div class="switch">
+            <button id="theme-switch" class="theme-switch">
+                <i class="fa-solid fa-moon" ></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
